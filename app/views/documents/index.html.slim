@@ -21,5 +21,8 @@ table class="table table-striped"
           '
           = link_to t('.destroy', :default => t("helpers.links.destroy")), document_path(document), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
 
-= link_to t('.new', :default => t("helpers.links.new")), new_document_path, :class => 'btn btn-primary'
+= form_tag new_document_path, method: :get do
+  = select_tag :document_type_id, options_from_collection_for_select(DocumentType.all, :id, :name)
+  = submit_tag "New Document", name: nil
+-#= link_to t('.new', :default => t("helpers.links.new")), new_document_path, :class => 'btn btn-primary'
 
