@@ -1,0 +1,14 @@
+= form_for @document, html: { class: "form form-horizontal document" } do |f|
+  .form-group
+    = f.label :name, :class => 'control-label'
+    .controls
+      = f.text_field :name, :class => 'form-control'
+    = error_span(@document[:name])
+  .form-group
+    = f.label :registration_date, :class => 'control-label'
+    .controls
+      = f.text_field :registration_date, :class => 'form-control'
+    = error_span(@document[:registration_date])
+  = f.submit nil, :class => 'btn btn-primary'
+  '
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), documents_path, :class => 'btn'
