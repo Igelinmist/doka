@@ -1,9 +1,9 @@
-= form_for @document_type, html: { class: "form form-horizontal document_type" } do |f|
+= form_for resource, html: { class: "form form-horizontal document_type" } do |f|
   .form-group
     = f.label :name, :class => 'control-label'
     .controls
       = f.text_field :name, :class => 'form-control'
-    = error_span(@document_type[:name])
+    = error_span(resource[:name])
   = f.fields_for :fields do |builder|
     = render 'field_fields', f: builder
   = link_to_add_fields 'Add Field', f, :fields

@@ -10,7 +10,7 @@ table class="table table-striped"
       th= model_class.human_attribute_name(:created_at)
       th=t '.actions', :default => t("helpers.actions")
   tbody
-    - @documents.each do |document|
+    - collection.each do |document|
       tr
         td= link_to document.id, document_path(document)
         td= document.name
