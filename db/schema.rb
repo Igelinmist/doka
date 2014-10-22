@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020043736) do
+ActiveRecord::Schema.define(version: 20141021041230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "document_fields", force: true do |t|
     t.string   "name"
@@ -38,6 +39,11 @@ ActiveRecord::Schema.define(version: 20141020043736) do
     t.date     "registration_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.hstore   "properties"
+    t.integer  "document_type_id"
   end
+
+  add_index "documents", ["document_type_id"], name: "index_documents_on_document_type_id", using: :btree
+  add_index "documents", ["properties"], name: "index_documents_on_properties", using: :gin
 
 end

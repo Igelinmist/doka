@@ -1,14 +1,18 @@
-= form_for @document, html: { class: "form form-horizontal document" } do |f|
+= form_for resource, html: { class: "form form-horizontal document" } do |f|
+  = f.hidden_field :document_type_id
   .form-group
     = f.label :name, :class => 'control-label'
     .controls
       = f.text_field :name, :class => 'form-control'
-    = error_span(@document[:name])
+    = error_span(resource[:name])
   .form-group
     = f.label :registration_date, :class => 'control-label'
     .controls
       = f.text_field :registration_date, :class => 'form-control'
-    = error_span(@document[:registration_date])
+    = error_span(resource[:registration_date])
+  = f.fields_for :properties, OpenStruct.new(resource.properties) do |builder|
+    - resource.document_type.fields.each do |field|
+      = render "documents/fields/#{field.field_type}", field: field, f: builder
   = f.submit nil, :class => 'btn btn-primary'
   '
   = link_to t('.cancel', :default => t("helpers.links.cancel")), documents_path, :class => 'btn'

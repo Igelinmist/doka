@@ -31,6 +31,7 @@ gem 'slim-rails'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'inherited_resources'
+# gem 'activerecord-postgres-hstore'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
