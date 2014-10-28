@@ -6,12 +6,19 @@ p
   strong= model_class.human_attribute_name(:name) + ':'
   br
   = resource.name
-- resource.fields.each do |field|
-  = field.name
-  br
-  = field.field_type
-  br
-  = field.required ? 'обязательно' : ''
+br
+table.table.table-bordered.table-condensed
+  thead
+    tr
+      th Атрибут
+      th Тип поля
+      th Наличие
+  tbody
+    - resource.fields.each do |field|
+      tr
+        td= field.name
+        td= field.field_type
+        td= field.required ? 'обязательно' : ''
 
 = link_to t('.back', :default => t("helpers.links.back")), document_types_path, :class => 'btn btn-default'
 '

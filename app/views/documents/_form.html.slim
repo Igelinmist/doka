@@ -1,4 +1,12 @@
 = form_for resource, html: { class: "form form-horizontal document" } do |f|
+  - if resource.errors.any?
+    #error_explanation
+      h2
+        = pluralize(resource.errors.count, "error")
+        ' prohibited this document from being saved:
+      ul
+        -resource.errors.full_messages.each do |msg|
+          li= msg
   = f.hidden_field :document_type_id
   .form-group
     = f.label :name, :class => 'control-label'

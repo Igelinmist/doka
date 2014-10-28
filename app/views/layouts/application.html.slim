@@ -30,20 +30,18 @@ html lang="en"
           a.navbar-brand href="#"Engineer
           .navbar-collapse.collapse.navbar-responsive-collapse
             ul.nav.navbar-nav
-              li= link_to "Link 1", "/path1"
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
+              li= link_to "Документы", documents_path
+              li= link_to "Шаблоны", document_types_path
 
     .container
       .row
         .col-lg-3
           .well.sidebar-nav
-            h3 Sidebar
+            h3 Меню
             ul.nav.nav-list
-              li.nav-header Sidebar
-              li= link_to "Link 1", "/path1"
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
+              li.nav-header Группа документов
+              li= link_to "Документы", documents_path
+              li= link_to "Шаблоны", document_types_path
         .col-lg-9
           = bootstrap_flash
           = yield
