@@ -31,6 +31,17 @@ gem 'slim-rails'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'inherited_resources'
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'shoulda-matchers', require: false
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'guard-rspec'
+  gem 'childprocess'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
+end
 # gem 'activerecord-postgres-hstore'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
