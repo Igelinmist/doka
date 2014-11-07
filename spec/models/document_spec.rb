@@ -1,5 +1,5 @@
 require "rails_helper"
 
 RSpec.describe Document, type: :model do
-  it {should belong_to :document_type}
+  it { should belong_to :document_type }
 end

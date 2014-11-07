@@ -1,5 +1,5 @@
 class IndexDocumentsProperties < ActiveRecord::Migration
   def change
-    add_hstore_index :documents, :properties, type: :gin
+    add_index :documents, :properties, using: :gin
   end
 end

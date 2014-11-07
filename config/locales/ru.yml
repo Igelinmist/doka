@@ -1,0 +1,14 @@
+ru:
+  documents:
+    index:
+      title: Документы
+  activerecord:
+    models:
+      document: 
+        one: Документ
+        many: Документы
+    attributes:
+      document:
+        name: Наименование
+        registration_date: Дата регистрации
+        created_at: Создан

@@ -27,10 +27,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'therubyracer'
+gem 'devise'
 gem 'slim-rails'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'inherited_resources'
+gem 'russian', '~> 0.6.0'
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers', require: false
