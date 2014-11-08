@@ -1,4 +1,8 @@
 ru:
+  authorization:
+    sign_in: Вход
+  action:
+    log_in: Авторизоваться
   documents:
     index:
       title: Документы
