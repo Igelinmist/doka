@@ -16,3 +16,5 @@ ru:
         name: Наименование
         registration_date: Дата регистрации
         created_at: Создан
+      user:
+        password: Пароль
