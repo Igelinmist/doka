@@ -33,10 +33,10 @@ html lang="en"
               li= link_to "Документы", documents_path
               li= link_to "Шаблоны", document_types_path
               -if user_signed_in?
-                li= link_to t("Sign out"), destroy_user_session_path, method: :delete
+                li= link_to t("actions.log_out"), destroy_user_session_path, method: :delete
               -else
-                li= link_to "Sign up", new_user_registration_path
-                li= link_to t('authorization.sign_in'), new_user_session_path
+                li= link_to t('actions.sign_up'), new_user_registration_path
+                li= link_to t('actions.log_in'), new_user_session_path
 
 
     .container

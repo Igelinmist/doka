@@ -1,0 +1,5 @@
+ru:
+  actions:
+    log_in: Вход
+    log_out: Выход
+    sign_up: Регистрация

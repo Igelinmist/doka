@@ -1,14 +1,13 @@
 ru:
-  authorization:
-    sign_in: Вход
-  action:
+  submit:
     log_in: Авторизоваться
+    sign_up: Зарегистрировать
   documents:
     index:
       title: Документы
   activerecord:
     models:
-      document: 
+      document:
         one: Документ
         many: Документы
     attributes:
@@ -18,3 +17,4 @@ ru:
         created_at: Создан
       user:
         password: Пароль
+        password_confirmation: Пароль (подтверждение)
