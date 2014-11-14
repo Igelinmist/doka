@@ -33,6 +33,18 @@ feature 'Guest can sign up', %q(
 
     expect(page).to have_content('Email уже существует')
   end
-  scenario 'New user enter existing email'
-  scenario 'New user enter different password and confirmation'
+
+  scenario 'New user enter different password and confirmation' do
+    visit '/'
+    click_on I18n.t('actions.sign_up')
+    fill_in 'Email', with: 'new_user@test.com'
+    fill_in I18n.t('activerecord.attributes.user.password'), with: '12345678'
+    fill_in I18n.t('activerecord.attributes.user.password_confirmation'), with: '87654321'
+    within 'form' do
+      click_on I18n.t('devise.registrations.new.submit')
+    end
+
+    expect(page).to have_content('не совпадает с подтверждением')
+  end
+
 end

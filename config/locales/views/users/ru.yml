@@ -4,3 +4,6 @@ ru:
       new:
         title: Регистрация нового пользователя
         submit: Регистрация
+    sessions:
+      new:
+        submit: Вход

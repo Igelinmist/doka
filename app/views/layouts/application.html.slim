@@ -31,7 +31,6 @@ html lang="en"
           .navbar-collapse.collapse.navbar-responsive-collapse
             ul.nav.navbar-nav
               li= link_to "Документы", documents_path
-              li= link_to "Шаблоны", document_types_path
               -if user_signed_in?
                 li= link_to t("actions.log_out"), destroy_user_session_path, method: :delete
               -else
@@ -47,7 +46,7 @@ html lang="en"
             ul.nav.nav-list
               li.nav-header Группа документов
               li= link_to "Документы", documents_path
-              li= link_to "Шаблоны", document_types_path
+              li= link_to t('links.document_types', default: 'Document types'), document_types_path
         .col-lg-9
           = bootstrap_flash
           = yield

@@ -6,7 +6,8 @@
     = error_span(resource[:name])
   = f.fields_for :fields do |builder|
     = render 'field_fields', f: builder
-  = link_to_add_fields 'Add Field', f, :fields
+  = link_to_add_fields t('.add_field'), f, :fields
+  br
   = f.submit nil, :class => 'btn btn-primary'
   '
   = link_to t('.cancel', :default => t("helpers.links.cancel")), document_types_path, :class => 'btn'

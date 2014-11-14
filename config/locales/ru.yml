@@ -1,4 +1,8 @@
 ru:
+  time:
+    formats:
+       short: "%H:%m"
+       default: "%d.%m.%Y %H:%m"
   submit:
     log_in: Авторизоваться
     sign_up: Зарегистрировать
@@ -17,4 +21,11 @@ ru:
         created_at: Создан
       user:
         password: Пароль
-        password_confirmation: Пароль (подтверждение)
+        password_confirmation: Пароль повторно
+  helpers:
+    links:
+      new: Создать
+      edit: Править
+      destroy: Удалить
+      cancel: Отмена
+    actions: Управление

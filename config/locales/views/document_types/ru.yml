@@ -1,0 +1,12 @@
+ru:
+  document_types:
+    index:
+      new: Новый шаблон
+      title: Шаблоны
+    new:
+      title: Новый шаблон
+    form:
+      add_field: Добавить поле
+    field_fields:
+      remove: "[ Удалить ]"
+      required: Обязательно
