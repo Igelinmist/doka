@@ -18,7 +18,7 @@ table.table.table-bordered.table-condensed
       tr
         td= field.name
         td= field.field_type
-        td= field.required ? 'обязательно' : ''
+        td= field.required ? t('.required') : ''
 
 = link_to t('.back', :default => t("helpers.links.back")), document_types_path, :class => 'btn btn-default'
 '

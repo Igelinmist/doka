@@ -7,6 +7,9 @@ ru:
       title: Новый шаблон
     form:
       add_field: Добавить поле
+      submit: Сохранить
     field_fields:
       remove: "[ Удалить ]"
       required: Обязательно
+    show:
+      required: обязательно

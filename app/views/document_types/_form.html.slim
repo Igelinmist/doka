@@ -8,6 +8,6 @@
     = render 'field_fields', f: builder
   = link_to_add_fields t('.add_field'), f, :fields
   br
-  = f.submit nil, :class => 'btn btn-primary'
+  = f.submit t('.submit'), :class => 'btn btn-primary'
   '
   = link_to t('.cancel', :default => t("helpers.links.cancel")), document_types_path, :class => 'btn'
